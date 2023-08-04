@@ -1,0 +1,21 @@
+<!-- <i class="fa fa-star"
+  *ngFor="let i of maxRatingArr; let index = index"
+  (mouseenter)="handleMouseEnter(index)"
+  (mouseleave)="handleMouseLeave()"
+  (click)="sendRating()"
+  [ngClass]="{checked: selectedRate > index}">
+</i> -->
+
+  <!-- <div class="input-group">
+    <input
+    name="selectedRate"
+    required
+    [(ngModel)]="selectedRate"
+    class="form-control input-sm"
+    > -->
+    <div class="input-group-append">
+      <ngx-stars [readonly]="false" [size]="2" [maxStars]="5" onclick="sendRating()"></ngx-stars>
+    </div>
+  <!-- </div> -->
+
+

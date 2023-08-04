@@ -1,0 +1,16 @@
+.dropdown-toggle, .dropdown-item {
+  cursor: pointer;
+}
+
+img {
+  max-height: 40px;
+  /* border: 2px solid white; */
+  display: inline;
+}
+.rounded-circle {
+  height: 50px;
+  width: 50px;
+
+}
+
+

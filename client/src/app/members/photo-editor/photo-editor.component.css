@@ -1,0 +1,58 @@
+/* .nv-file-over{
+  border: dotted 3px red;
+}
+
+input[type=file]{
+  color: transparent;
+}
+
+.not-approved {
+  opacity: 0.2;
+ }
+ .img-wrapper {
+  position: relative
+ }
+ .img-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 30%;
+ }
+ img.img-thumbnail {
+  height: 100px;
+  min-width: 100px !important;
+  margin-bottom: 2px;
+} */
+img.img-thumbnail {
+  height: 100px;
+  min-width: 100px !important;
+  margin-bottom: 2px;
+}
+
+.nv-file-over {
+  border: dotted 3px red;
+}
+
+input[type=file] {
+  color: transparent;
+}
+
+.not-approved {
+  opacity: 0.2;
+}
+
+.img-wrapper {
+  position: relative
+}
+
+
+.img-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: 2px;
+  margin-right: 15px;
+  bottom: 50%;
+}

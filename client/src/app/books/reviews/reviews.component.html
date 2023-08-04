@@ -1,0 +1,168 @@
+
+<!-- <div class="row mb-4">
+  <div class="btn-group" name='container'>
+
+  <button class="btn btn-primary" btnRadio='Sent' [(ngModel)]="container" (click)="loadReviews()"><i class="fa fa-envelope-open"></i> Sent</button>
+</div>
+<div class="row" *ngIf="reviews1?.length >0">
+  <table class="table table-hover" style="cursor: pointer;">
+    <thead>
+      <tr> -->
+        <!-- <th style="width: 40%;">Message</th>
+        <th style="width: 20%;">From / To</th>
+        <th style="width: 20%;">Sent / Received</th>
+        <th style="width: 20%;"></th>
+      </tr> -->
+    <!-- </thead>
+    <tbody class="align-middle">
+      <tr *ngFor="let review of reviews1">
+        <td>
+          <div *ngIf="container === 'Sent'">
+            <img class="img-wrapper" routerLink="{{'/books/detail/' + review.bookId}}" src="{{review.bookPhotoUrl}} " alt="recipient photo"> -->
+            <!-- <strong>{{review.bookTitle | titlecase}}</strong> -->
+
+
+<!--
+          </div>
+        </td>
+        <td><ngx-stars [readOnly]="true" [maxStars]="5" [initialStars]="review.rate"></ngx-stars><br>{{review.content}}
+          </td>
+        <td>
+          <div *ngIf="container === 'Sent'">
+            <img class="img-circle rounded-circle me-2" routerLink="{{'/members/' + review.senderUsername}}" src="{{review.senderPhotoUrl}} " alt="recipient photo">
+            <strong>{{review.senderUsername | titlecase}}</strong>
+          </div> -->
+          <!-- <div *ngIf="container !== 'Outbox'">
+            <img class="img-circle rounded-circle me-2" src="{{message.senderPhotoUrl}} " alt="sender photo">
+            <strong>{{message.sendertUsername | titlecase}}</strong>
+          </div> -->
+        <!-- </td>
+        <td>{{review.reviewSent | timeago}}</td> -->
+        <!-- <td *ngFor="let comment of comments">{{comment.content}}</td> -->
+        <!-- <td>
+          <button class="btn btn-danger"
+          (click)="$event.stopPropagation()"
+          (click)="deleteMessage(message.id)">Delete</button>
+        </td> -->
+        <!-- <td>
+          <i class="fa fa-heart" aria-hidden="true"></i>
+          <br>
+           <i class="fa fa-comment"  (click)="registerToggle()" aria-hidden="true"></i>
+           <br>
+          <i class="fa fa-comments" (click)="registerToggle1()" aria-hidden="true"></i>
+        </td>
+      <td *ngIf="filter">
+          <app-comments class="comment" (cancelRegister)="cancelRegisterMode($event)" [comments]="comments" [reviewTitle]="review.content"></app-comments>
+        </td>
+        <td *ngIf="filter1">
+          <app-comment-thread class="thread" style="width: 50%;" (cancelRegister1)="cancelRegisterMode($event)" [comments]="comments" [reviewTitle]="review.content"></app-comment-thread>
+        </td>
+
+      </tr>
+
+    </tbody>
+  </table> -->
+  <section class="main" *ngFor="let review of reviews1">
+    <div class="full-boxer">
+
+        <div class="comment-box">
+          <div class="box-middle">
+            <img class="img-wrapper" routerLink="{{'/books/detail/' + review.bookTitle}}" src="{{review.bookPhotoUrl}} " alt="recipient photo">
+            <br>
+          </div>
+          <div class="box-top">
+                <div class="Profile">
+
+                    <div class="profile-image">
+                        <img routerLink="{{'/members/' + review.senderUsername}}" src="{{review.senderPhotoUrl}} " alt="recipient photo">
+                    </div>
+                    <div class="Name">
+                        <strong>{{review.senderUsername | titlecase}}</strong>
+                        <span><i class="fa fa-clock-o"></i>{{review.reviewSent | timeago}}</span>
+                    </div>
+                    <div class="comment">
+                      <p>
+                        <ngx-stars [readOnly]="true" [maxStars]="5" [initialStars]="review.rate"></ngx-stars>
+                        <br>"{{review.content}}"
+                      </p>
+                  </div>
+
+
+                </div>
+          </div>
+          <div class="box-end">
+              <div class="Profile1">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+              <br>
+               <i class="fa fa-comment"  (click)="registerToggle()" aria-hidden="true"></i>
+               <br>
+              <i class="fa fa-comments" (click)="registerToggle1()" aria-hidden="true"></i>
+              </div>
+              <!-- <div>
+                <div *ngIf="filter">
+                  <app-comments class="comment" (cancelRegister)="cancelRegisterMode($event)" [comments]="comments" [reviewTitle]="review.content"></app-comments>
+                </div>
+                <div *ngIf="filter1">
+                  <app-comment-thread class="thread" style="width: 50%;" (cancelRegister1)="cancelRegisterMode($event)" [comments]="comments" [reviewTitle]="review.content"></app-comment-thread>
+                </div>
+              </div> -->
+          </div>
+            <!-- <div>
+              <div *ngIf="filter">
+                <app-comments class="comment" (cancelRegister)="cancelRegisterMode($event)" [comments]="comments" [reviewTitle]="review.content"></app-comments>
+              </div>
+              <div *ngIf="filter1">
+                <app-comment-thread class="thread" style="width: 50%;" (cancelRegister1)="cancelRegisterMode($event)" [comments]="comments" [reviewTitle]="review.content"></app-comment-thread>
+              </div>
+            </div> -->
+
+            <!-- <div class="box-middle">
+              <img class="img-wrapper" routerLink="{{'/books/detail/' + review.bookId}}" src="{{review.bookPhotoUrl}} " alt="recipient photo">
+            </div> -->
+            <!-- <div class="comment">
+                <p>
+                  <ngx-stars [readOnly]="true" [maxStars]="5" [initialStars]="review.rate"></ngx-stars>
+                  <br>{{review.content}}
+                </p>
+            </div> -->
+            <div>
+              <div *ngIf="filter">
+                <app-comments class="comment" (cancelRegister)="cancelRegisterMode($event)" [comments]="comments" [reviewTitle]="review.content"></app-comments>
+              </div>
+              <div *ngIf="filter1">
+                <app-comment-thread class="thread" style="width: 50%;" (cancelRegister1)="cancelRegisterMode($event)" [comments]="comments" [reviewTitle]="review.content"></app-comment-thread>
+              </div>
+            </div>
+      </div>
+        <!-- <div class="ending">
+          <div *ngIf="filter">
+            <app-comments class="comment" (cancelRegister)="cancelRegisterMode($event)" [comments]="comments" [reviewTitle]="review.content"></app-comments>
+          </div>
+          <div *ngIf="filter1">
+            <app-comment-thread class="thread" style="width: 50%;" (cancelRegister1)="cancelRegisterMode($event)" [comments]="comments" [reviewTitle]="review.content"></app-comment-thread>
+          </div>
+        </div> -->
+
+
+    </div>
+
+</section>
+
+
+<!-- </div> -->
+<div class="d-flex justify-content-center" *ngIf="!loading && pagination && reviews && reviews1.length > 0 ">
+  <pagination
+      [boundaryLinks]="true"
+      [totalItems]="pagination.totalItems"
+      [itemsPerPage]="pagination.itemsPerPage"
+      [maxSize]="10"
+      [(ngModel)]="pagination.currentPage"
+      (pageChanged)="pageChanged($event)"
+      previousText="&lsaquo;"
+      nextText="&rsaquo;"
+      firstText="&laquo;"
+      lastText="&raquo;">
+
+  </pagination>
+</div>
+

@@ -1,0 +1,136 @@
+<!-- <p>books-detail works!</p>
+<div class="row" *ngIf="title">
+  <div class="col-4">
+    <div class="card">
+      <img src="{{title.photoUrlB || './assets/user.png'}}" alt="{{title.title}}"
+      class="card-img-top img-thumbnail">
+
+      <div class="card-body">
+        <div>
+          <strong>Title:</strong>
+          <p>{{title.title}}</p>
+        </div>
+        <div>
+          <strong>Author</strong>
+          <p>{{title.author}}</p>
+        </div>
+        <div>
+          <strong>Genres</strong>
+          <p>{{title.genres}}</p>
+        </div>
+
+      </div>
+      <div class="card-footer">
+        <div class="btn-group d-flex">
+          <button class="btn btn-primary">Like</button>
+          <button class="btn btn-success">Message</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-8">
+    <tabset class="member-tabset">
+      <tab heading="About {{title.title}}">
+        <h4>Description</h4>
+        <p>{{title.description}}</p>
+        <h4>Review</h4>
+        <p>{{title.review}}</p>
+      </tab>
+      <tab heading="Photo">
+        <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+      </tab>
+      <tab heading="Edit Photos">
+
+        <app-book-photo-editor [title]="title"></app-book-photo-editor>
+      </tab>
+
+
+
+
+    </tabset>
+  </div>
+</div>
+
+ -->
+
+ <div class="row shadow" *ngIf="title">
+  <div class="col-sm-3 p-0">
+    <div class="card">
+      <div class="card-img-wrapper">
+        <img *ngIf="title.photoUrl" class="card-img-top" src="{{title.photoUrl}}">
+        <img *ngIf="!title.photoUrl" class="card-img-top" src="assets/user.png">
+      </div>
+      <div class="card-body">
+        <h1 class="card-title">{{title.title}}</h1>
+        <div>
+            <strong>{{title.author}}</strong>
+        </div>
+        <div>
+          <strong>{{title.genre}}</strong>
+      </div>
+      <p class="card-title text-center mb-1">
+
+      </p>
+        <!-- <div>
+           <strong>in {{property.City}}</strong>
+        </div> <hr> -->
+
+      </div>
+      <div class="card-footer">
+        <div class="btn-group d-flex">
+          <button class="btn btn-primary">Read</button>
+          <button class="btn btn-dark">Favorites</button>
+        </div>
+      </div>
+  </div>
+  </div>
+  <div class="col-sm-9 p-0">
+    <div class="tab-panel">
+      <tabset class="member-tabset">
+        <tab heading="Overview">
+
+          <div class="row">
+              <div class="col-sm-12">
+                  <div class="heading">
+
+                      <h2>{{title.title}}</h2>
+                  </div>
+
+                  <div class="heading">
+                      <h4>Description</h4>
+                      <p>{{title.description}}</p>
+                  </div>
+
+                  <div class="heading">
+                      <h4>About Author</h4>
+                      <p>{{title.aboutAuthor}}</p>
+                  </div>
+                  <div class="heading">
+                    <h4>Reviews</h4>
+                    <!-- <app-reviews></app-reviews> -->
+                    <app-member-review  [review]="reviews" [title]="title.title"></app-member-review>
+                  </div>
+
+                  <!-- <div class="heading">
+                      <strong>Posession</strong>
+                      <p>{{property.Possession}}</p>
+                  </div> -->
+              </div>
+
+
+              </div>
+
+
+        </tab>
+        <tab heading="See other reviews">
+          <app-review-thread  [review]="reviews" [title]="title.title"></app-review-thread>
+          <!-- <app-member-review  [review]="reviews" [title]="title.title"></app-member-review> -->
+        </tab>
+
+
+
+      </tabset>
+    </div>
+  </div>
+</div>

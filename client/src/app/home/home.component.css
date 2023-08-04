@@ -1,0 +1,93 @@
+/*
+div {
+  background-image: url('bookhome.jpg');
+} */
+.img-wrapper{
+  height: 600px;
+   width: 1600px;
+  /* border-radius: 25px;
+  box-shadow: 10px 10px 10px 10px gray; */
+
+}
+
+.title{
+  color: blacke;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* .lead{
+  position: absolute;
+  color: black;
+  top: 45%;
+  left: 50%;
+  transform: translate(-20%, -20%);
+  margin-left: 250px;
+} */
+.container{
+  position: absolute;
+  top: 30%;
+  transform: translate(-50%,-50%);
+  left: 50%;
+}
+.btn-dark{
+  position: absolute;
+  top: 56%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+
+  text-align: top;
+
+
+
+}
+
+
+ .main{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  top: 10%;
+}
+
+ .main h1{
+  position: relative;
+  font-size: 55px;
+  top: 80px;
+  left: 25px;
+}
+
+ .main h1 span{
+  color: #089da1;
+}
+
+ .main p{
+  width: 650px;
+  /* text-align: justify; */
+  line-height: 22px;
+  position: relative;
+  top: 125px;
+  left: 25px;
+}
+
+ .main .main_tag .main_btn{
+  background: #089da1;
+  padding: 10px 20px;
+  position: relative;
+  top: 200px;
+  left: 25px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+ .main .main_img img{
+  width: 780px;
+  position: relative;
+  top: 90px;
+  left: 20px;
+}
+
+

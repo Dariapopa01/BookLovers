@@ -1,0 +1,13 @@
+<img
+  *ngIf="!list"
+  src="./assets/user.png"/>
+
+  <div *ngIf="list?.length ===0">No list to display</div>
+
+  <ng-container *ngIf="list && list.length > 0">
+    <div *ngFor="let book of list; let index = index">
+      <div>
+        {{index}} {{book.title}}
+      </div>
+    </div>
+  </ng-container>

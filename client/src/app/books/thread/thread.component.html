@@ -1,0 +1,22 @@
+
+
+<div class="container mt-3" #scrollMe
+style="overflow: scroll; height: 200px; width: 400px;"
+[scrollTop]="scrollMe.scrollWidth">
+  <!-- <div class="d-flex">
+    <div class="btn-group" name="container">
+      <button class="btn btn-primary"
+      btnRadio="Read"
+      [(ngModel)]="container"
+      (click)="loadReviews()">Books I like</button>
+    </div>
+  </div> -->
+  <div class="row mt-3" *ngIf="reading">
+    <div class="col-2"  *ngFor="let title of titles$ |async" name="container">
+        <app-book-card [(ngModel)]="container"
+        (click)="loadReviews()"
+        [title] = "title"
+        > </app-book-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,170 @@
+<body class="bgcolor">
+  <!-- <div class="container mt-5">
+    <div class="text-center">
+      <button (click)="registerToggle()">Filter</button>
+    </div>
+  </div>
+  <div *ngIf="filter">
+    <div class="text-center mt-3">
+      <h2>Users: {{pagination?.totalItems}} </h2>
+    </div>
+
+    <div class="container mt-3" *ngIf="userParams">
+      <form (cancelRegister)="cancelRegisterMode($event)" #form="ngForm" class="d-flex mb-3" (ngSubmit)="loadMembers()" autocomplete="off">
+        <div class="d-flex mx-2">
+          <label  class="col-form-label">
+            Age from:
+          </label>
+          <input type="number" class="form-control ms-1" style="width: 90px;" name="minAge"
+          [(ngModel)]="userParams.minAge">
+        </div>
+        <div class="d-flex mx-2">
+          <label  class="col-form-label">
+            Age to:
+          </label>
+          <input type="number" class="form-control ms-1" style="width: 90px;" name="maxAge"
+          [(ngModel)]="userParams.maxAge">
+        </div>
+
+        <button class="btn btn-primary ms-1" type="submit">Apply Filters</button>
+        <button (click)="resetFilters()" class="btn btn-info ms-1" type="submit">Reset Filters</button>
+
+
+        <div class="col">
+          <div class="btn-group float-end">
+            <button class="btn btn-primary"
+            type="button"
+            name="orderBy"
+            [(ngModel)]="userParams.oderdBy"
+            btnRadio="lastActive"
+            (click)="loadMembers()">
+              Last active
+            </button>
+            <button class="btn btn-primary"
+            type="button"
+            name="orderBy"
+            [(ngModel)]="userParams.oderdBy"
+            btnRadio="created"
+            (click)="loadMembers()">
+              Newest members
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div> -->
+
+<div class="row">
+  <div class="boxContainer">
+   <table class="elementsContainer">
+    <tr>
+
+      <td>
+        <input #search type="text" placeholder="Search" class="search">
+      </td>
+      <td>
+        <i (click)="onSearch()" class="fa fa-search" aria-hidden="true"></i>
+      </td>
+      <td>
+        <i class="fa fa-filter" aria-hidden="true" (click)="registerToggle()"></i>
+      </td>
+    </tr>
+   </table>
+  </div>
+</div>
+
+
+<div class="container mt-5">
+
+</div>
+<div *ngIf="filter">
+  <!-- <div class="text-center mt-3">
+    <h2>Users: {{pagination?.totalItems}} </h2>
+  </div> -->
+
+  <div class="container mt-3" *ngIf="userParams">
+    <form (cancelRegister)="cancelRegisterMode($event)" #form="ngForm" class="d-flex mb-3" (ngSubmit)="loadMembers()" autocomplete="off">
+      <div class="d-flex mx-2">
+        <label  class="col-form-label">
+          Age from:
+        </label>
+        <input type="number" class="form-control ms-1" style="width: 90px;" name="minAge"
+        [(ngModel)]="userParams.minAge">
+      </div>
+      <div class="d-flex mx-2">
+        <label  class="col-form-label">
+          Age to:
+        </label>
+        <input type="number" class="form-control ms-1" style="width: 90px;" name="maxAge"
+        [(ngModel)]="userParams.maxAge">
+      </div>
+
+      <button class="btn btn-outline-primary  ms-1" type="submit">Apply Filters</button>
+      <button (click)="resetFilters()" class="btn btn-outline-danger  ms-1" type="submit">Reset Filters</button>
+
+
+      <div class="col">
+        <div class="btn-group float-end">
+          <button class="btn btn-primary  ms-1"
+          type="button"
+          name="orderBy"
+          [(ngModel)]="userParams.oderdBy"
+          btnRadio="lastActive"
+          (click)="loadMembers()">
+            Last active
+          </button>
+        </div>
+          <div class="btn-group float-end">
+          <button class="btn btn-dark"
+          type="button"
+          name="orderBy"
+          [(ngModel)]="userParams.oderdBy"
+          btnRadio="created"
+          (click)="loadMembers()">
+            Newest members
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+  <div class="row">
+    <!-- <table class="table table-hover" style="cursor:pointer">
+    <thead>
+      <tr>
+        <th>Discover new users</th>
+      </tr>
+    </thead>
+    <tbody class="align-middle">
+      <tr *ngFor="let member of members">
+        <td>
+          <div>
+            <app-member-card [member]="member"></app-member-card>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+    </table> -->
+    <div  *ngFor="let member of members">
+      <app-member-card [member]="member"></app-member-card>
+    </div>
+  </div>
+
+
+  <div class="d-flex justify-content-center" *ngIf="pagination">
+    <pagination
+        [boundaryLinks]="true"
+        [totalItems]="pagination.totalItems"
+        [itemsPerPage]="pagination.itemsPerPage"
+        [maxSize]="10"
+        [(ngModel)]="pagination.currentPage"
+        (pageChanged)="pageChanged($event)"
+        previousText="&lsaquo;"
+        nextText="&rsaquo;"
+        firstText="&laquo;"
+        lastText="&raquo;">
+
+    </pagination>
+  </div>
+
+</body>

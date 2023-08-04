@@ -1,0 +1,19 @@
+.card {
+  min-height: 600px;
+}
+
+.card img {
+  padding: 10px;
+  margin-left: 15px;
+  height: 400px;
+  width: 300px;
+}
+
+.card-img-wrapper {
+  height: 400px;
+}
+.ngx-gallery{
+  display: inline-block;
+  margin-bottom: 20px;
+}
+

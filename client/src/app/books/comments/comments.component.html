@@ -1,0 +1,74 @@
+
+<div class="card">
+  <div class="card-body">
+      <div *ngIf="comments.length === 0">
+          Add a comment...
+      </div>
+      <!-- *ngIf="reviews.length > 0"  -->
+      <ul class="chat">
+          <li *ngFor="let comment of comments" >
+              <div>
+                  <span class="chat-imag float-end">
+                      <img class="rounded-circle " routerLink="{{'/members/' + comment.senderUsername}}" src="{{comment.senderPhotoUrl}}" alt="{{comment.senderUsername}}">
+                  </span>
+
+                  <!-- <div class="chat-body" >
+
+                       <small class="text-muted">
+                        <span>
+                          <i class="fa fa-star"
+                           *ngFor="let i of maxRatingArr; let index = index"
+                            (mouseenter)="handleMouseEnter(index)"
+                            (mouseleave)="handleMouseLeave()"
+                            (click)="sendRating()"
+                            [ngClass]="{checked: selectedRate > index}">
+                            </i>
+                        </span>
+                      </small>
+                      <ngx-stars [readOnly]="false" [maxStars]="5" [rating]="rating.ratingSelected"></ngx-stars>
+                    </div> -->
+                      <div class="header">
+                          <small class="text-muted">
+                              <span class="fa fa-clock-o">{{comment.commentSent | timeago}}</span>
+                              <!-- <span class="text-danger" *ngIf="!review.dateSent && review.senderUsername!==username">
+                                  (unread)
+                              </span>
+                              <span class="text-success" *ngIf="review.dateSent && review.senderUsername!==username">
+                                  (read {{review.dateSent + 'Z' | timeago}})
+                              </span> -->
+                          </small>
+                      </div>
+                      <!-- <ngx-stars [readOnly]="true" [maxStars]="5" [initialStars]="review.rate"></ngx-stars> -->
+
+                      <p> {{comment.content}}</p>
+                  </div>
+
+          </li>
+      </ul>
+  </div>
+  <div class="card-footer">
+      <form #commentForm="ngForm" (ngSubmit)="sendComment()" autocomplete="off">
+          <div class="input-group">
+              <input
+              name="commentContent"
+              required
+              [(ngModel)]="commentContent"
+              type="text" class="form-control input-sm"
+              placeholder="Add a comment" >
+
+                <!-- <input
+                name="ratingSelected"
+                required
+                [(ngModel)]="ratingSelected"
+                type="number" class="form-control input-sm"
+                placeholder="Add rating" > -->
+
+              <div class="input-group-append">
+                  <button [disabled]="!commentForm.valid" class="btn btn-primary" type="submit">Send</button>
+              </div>
+          </div>
+      </form>
+  </div>
+</div>
+
+

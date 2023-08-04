@@ -1,0 +1,40 @@
+<body >
+  <img class="img-wrapper" src="./assets/bg.png">
+  <div class="container mt-5" >
+    <div *ngIf="!registerMode" style="text-align:center;">
+
+      <!-- <h2 class="title"> Find your books </h2>
+      <p class="lead">See books...<br>All you need to do is<br> </p> -->
+      <!-- <button class="btn btn-dark" (click)="registerToggle()" >Sign up</button> -->
+      <div class="dark ">
+        <div class="main">
+
+          <div class="main_tag" *ngIf="!registerMode" style="text-align:center;">
+              <h1>WELCOME TO<br><span>BOOK LOVERS</span></h1>
+              <p class="lead" *appHasRole="['Member']"> <strong>Find your favorite books today.</strong><br><br>Save those you want to read.<br>Tell your friends everything about them.</p>
+              <p class="lead" *appHasRole="['Admin']">
+                See books...<br>All you need to do is
+              </p>
+              <a *appHasRole="['Admin']" class="main_btn" (click)="registerToggle()">Sign up</a>
+              <!-- <button class="btn btn-dark" (click)="registerToggle()" >Sign up</button> -->
+
+          </div>
+
+          <div class="main_img">
+              <img src="./assets/table.png">
+          </div>
+
+      </div>
+
+      </div>
+    </div>
+    <div *ngIf="registerMode" class="container">
+      <div >
+        <div>
+          <app-register  (cancelRegister)="cancelRegisterMode($event)"></app-register>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>

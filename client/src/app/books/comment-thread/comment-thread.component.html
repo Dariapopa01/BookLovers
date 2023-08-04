@@ -1,0 +1,48 @@
+<div class="card">
+  <div class="card-body">
+
+      <!-- *ngIf="reviews.length > 0"  -->
+      <ul class="chat"
+      #scrollMe
+      style="overflow: scroll; height: 200px; width:920px"
+      [scrollTop]="scrollMe.scrollWidth">
+          <li *ngFor="let comment of comments" >
+              <div>
+                  <span class="chat-imag float-start">
+                      <img class="rounded-circle " routerLink="{{'/members/' + comment.senderUsername}}" src="{{comment.senderPhotoUrl}}" alt="{{comment.senderUsername}}">
+                  </span>
+
+                  <div class="chat-body" >
+
+                      <!-- <small class="text-muted">
+                        <span>
+                          <i class="fa fa-star"
+                           *ngFor="let i of maxRatingArr; let index = index"
+                            (mouseenter)="handleMouseEnter(index)"
+                            (mouseleave)="handleMouseLeave()"
+                            (click)="sendRating()"
+                            [ngClass]="{checked: selectedRate > index}">
+                            </i>
+                        </span>
+                      </small> -->
+                      <!-- <ngx-stars [readOnly]="false" [maxStars]="5" [rating]="rating.ratingSelected"></ngx-stars> -->
+                    </div>
+                      <div class="header">
+                          <small class="text-muted">
+                              <span class="fa fa-clock-o">   {{comment.commentSent | timeago}}</span>
+                              <!-- <span class="text-danger" *ngIf="!review.dateSent && review.senderUsername!==username">
+                                  (unread)
+                              </span>
+                              <span class="text-success" *ngIf="review.dateSent && review.senderUsername!==username">
+                                  (read {{review.dateSent + 'Z' | timeago}})
+                              </span> -->
+                          </small>
+                      </div>
+                      <!-- <ngx-stars [readOnly]="true" [maxStars]="5" [initialStars]="review.rate"></ngx-stars> -->
+
+                      <p>   {{comment.content}}</p>
+                  </div>
+
+          </li>
+      </ul>
+  </div>

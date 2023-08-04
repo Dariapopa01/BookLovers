@@ -1,0 +1,141 @@
+<!-- <form [formGroup]="registerForm"  (ngSubmit)="registerForm.valid && register()" autocomplete="off">
+  <h2 class="text-center text-primary">Sign up</h2>
+  <hr>
+  <div class="mb-3">
+    <label style="margin-right: 10px;">I am:</label>
+    <label class="form-check-label">
+      <input type="radio" class="form-check-input" value="male" formControlName="gender">Male
+    </label>
+    <label class="form-check-label">
+      <input type="radio" class="form-check-input ms-3"  value="female" formControlName="gender">Female
+    </label>
+  </div>
+
+  <app-text-input [formControl]="$any(registerForm.controls['username'])"
+    [label]="'Username'"></app-text-input>
+  <app-text-input [formControl]="$any(registerForm.controls['knownAs'])"
+    [label]="'Known As'"></app-text-input>
+  <app-date-picker [formControl]="$any(registerForm.controls['dateOfBirth'])"
+    [label]="'Date of Birth'" ></app-date-picker>
+  <app-text-input [formControl]="$any(registerForm.controls['city'])"
+    [label]="'City'"></app-text-input>
+  <app-text-input [formControl]="$any(registerForm.controls['country'])"
+    [label]="'Country'"></app-text-input>
+  <app-text-input [formControl]="$any(registerForm.controls['password'])"
+    [label]="'Password'" [type]="'password'"></app-text-input>
+  <app-text-input [formControl]="$any(registerForm.controls['confirmPassword'])"
+    [label]="'Conform Password'" [type]="'password'"></app-text-input>
+
+
+  <div class="row" *ngIf="validationErrors">
+    <ul class="text-danger">
+      <li *ngFor="let error of validationErrors">
+        {{error}}
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="text">
+    <button [disabled]="!registerForm.valid" class="btn btn-success me2" type="submit">Register</button>
+    <button class="btn btn-default" type="button" (click)="cancel()">Cancel</button>
+  </div>
+</form> -->
+
+
+<body>
+  <div class="container">
+    <h1 class="form-title">Registration</h1>
+    <form [formGroup]="registerForm"  (ngSubmit)="registerForm.valid && register()" autocomplete="off">
+      <div class="main-user-info">
+        <div class="user-input-box">
+          <app-text-input [formControl]="$any(registerForm.controls['username'])"
+          [label]="'Username'"></app-text-input>
+          <!-- <label for="fullName">Full Name</label>
+          <input type="text"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="Enter Full Name"/> -->
+        </div>
+        <div class="user-input-box">
+          <app-text-input [formControl]="$any(registerForm.controls['knownAs'])"
+          [label]="'Known As'"></app-text-input>
+          <!-- <label for="username">Username</label>
+          <input type="text"
+                  id="username"
+                  name="username"
+                  placeholder="Enter Username"/> -->
+        </div>
+        <div class="user-input-box">
+          <app-date-picker [formControl]="$any(registerForm.controls['dateOfBirth'])"
+          [label]="'Date of Birth'" ></app-date-picker>
+          <!-- <label for="email">Email</label>
+          <input type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter Email"/> -->
+        </div>
+        <div class="user-input-box">
+          <app-text-input [formControl]="$any(registerForm.controls['city'])"
+          [label]="'City'"></app-text-input>
+          <!-- <label for="phoneNumber">Phone Number</label>
+          <input type="text"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  placeholder="Enter Phone Number"/> -->
+        </div>
+        <div class="user-input-box">
+          <app-text-input [formControl]="$any(registerForm.controls['password'])"
+            [label]="'Password'" [type]="'password'"></app-text-input>
+          <!-- <label for="confirmPassword">Confirm Password</label>
+          <input type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  placeholder="Confirm Password"/> -->
+        </div>
+        <div class="user-input-box">
+          <app-text-input [formControl]="$any(registerForm.controls['country'])"
+          [label]="'Country'"></app-text-input>
+          <!-- <label for="password">Password</label>
+          <input type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Enter Password"/> -->
+        </div>
+
+        <div class="user-input-box">
+          <app-text-input [formControl]="$any(registerForm.controls['confirmPassword'])"
+        [label]="'Conform Password'" [type]="'password'"></app-text-input>
+          <!-- <label for="confirmPassword">Confirm Password</label>
+          <input type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  placeholder="Confirm Password"/> -->
+        </div>
+      </div>
+      <div class="gender-details-box">
+        <span class="gender-title">Gender</span>
+        <div class="gender-category">
+          <input type="radio" class="form-check-input" value="male" formControlName="gender">Male
+          <label></label>
+          <input type="radio" class="form-check-input ms-3"  value="female" formControlName="gender">Female
+          <label></label>
+
+        </div>
+
+      </div>
+      <div class="row" *ngIf="validationErrors">
+        <ul class="text-danger">
+          <li *ngFor="let error of validationErrors">
+            {{error}}
+          </li>
+        </ul>
+      </div>
+      <div class="form-submit-btn">
+        <button [disabled]="!registerForm.valid" class="btn btn-success me2" type="submit">Register</button>
+    <button class="btn btn-default" type="button" (click)="cancel()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</body>
+
