@@ -18,19 +18,17 @@ Social media app using .Net and Angular
   -Cloudinary for pictures
 
   ### Screenshots
-![demo](file:///C:/Users/Daria/Desktop/proiect/proiect.mp4)
+![demo]([file:///C:/Users/Daria/Desktop/proiect/proiect.mp4](https://github.com/Dariapopa01/BookLovers/blob/master/Books/images/proiect.mp4))
 
   
-![books](https://github.com/Dariapopa01/BookLovers/assets/92114784/cd29acff-fe11-481d-8d7d-32c62e1ddf2a)
+![dashboard](https://github.com/Dariapopa01/BookLovers/blob/master/Books/images/home.png)
 
 ![utilizatorilist](https://github.com/Dariapopa01/BookLovers/assets/92114784/9812d947-fd9a-43b4-9d3b-59e707608970)
 
-![user mesaj](https://github.com/Dariapopa01/BookLovers/assets/92114784/4dced943-5bb7-45dd-96bb-f39ae3b74f69)
+![booka](https://github.com/Dariapopa01/BookLovers/blob/master/Books/images/booklist.png)
 
 ![messages](https://github.com/Dariapopa01/BookLovers/assets/92114784/68fcdbd4-68a4-4ba9-9a16-dc882cdf9978)
 
-
-![butoane user](https://github.com/Dariapopa01/BookLovers/assets/92114784/2c63f67f-1d7e-42b1-8aa5-b01f797b10bb)
 
 
 ![adauga photo](https://github.com/Dariapopa01/BookLovers/assets/92114784/4940fc09-b2b4-4f76-997a-449b08db5a41)
