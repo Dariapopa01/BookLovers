@@ -14,11 +14,11 @@ Social media app using .Net and Angular
   ## Used
   -.Net
   -Angular
-  -Sqlite
+  -PostgreSQL
   -Cloudinary for pictures
 
   ### Screenshots
-![homepageee](https://github.com/Dariapopa01/BookLovers/assets/92114784/dacce23c-3879-4e97-bc9c-442cb2f9405e)
+![demo](file:///C:/Users/Daria/Desktop/proiect/proiect.mp4)
 
   
 ![books](https://github.com/Dariapopa01/BookLovers/assets/92114784/cd29acff-fe11-481d-8d7d-32c62e1ddf2a)
