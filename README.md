@@ -20,23 +20,17 @@ Social media app using .Net and Angular
   ### Screenshots
 ![demo]([file:///C:/Users/Daria/Desktop/proiect/proiect.mp4](https://github.com/Dariapopa01/BookLovers/blob/master/Books/images/proiect.mp4))
 
-  
+Dashboard with user reviews and newest releases
 ![dashboard](https://github.com/Dariapopa01/BookLovers/blob/master/Books/images/home.png)
-
+Users
 ![utilizatorilist](https://github.com/Dariapopa01/BookLovers/assets/92114784/9812d947-fd9a-43b4-9d3b-59e707608970)
-
+Book List
 ![booka](https://github.com/Dariapopa01/BookLovers/blob/master/Books/images/booklist.png)
 
 ![messages](https://github.com/Dariapopa01/BookLovers/assets/92114784/68fcdbd4-68a4-4ba9-9a16-dc882cdf9978)
 
 
+Add photo
+![adauga photo](https://github.com/Dariapopa01/BookLovers/blob/master/Books/images/books.png)
 
-![adauga photo](https://github.com/Dariapopa01/BookLovers/assets/92114784/4940fc09-b2b4-4f76-997a-449b08db5a41)
-
-![ap await](https://github.com/Dariapopa01/BookLovers/assets/92114784/cf46c9a0-c597-4fb9-9f83-12a6a828c817)
-
-
-![reviews](https://github.com/Dariapopa01/BookLovers/assets/92114784/5be172f1-2cad-473d-8522-72f13eafa1a8)
-
-![accept](https://github.com/Dariapopa01/BookLovers/assets/92114784/aba2550d-04b4-4707-ba02-6ff2b7dc96e8)
 
